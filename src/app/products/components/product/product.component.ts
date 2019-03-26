@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SafeMethodCall } from '@angular/compiler';
 
-import { ProductSizes } from '../../../common/constants';
-
-const _tags = ['foo', 'bar', 'baz'];
+import { IProduct } from "../../models/product.model";
+import { ProductCategories } from '../../shared/constants';
 
 @Component({
   selector: 'app-product',
@@ -12,20 +11,23 @@ const _tags = ['foo', 'bar', 'baz'];
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-name: String = "Product1";
+  @Input() product: IProduct;
+  
+// name: String = "Product1";
 
-description: String = "Short product description";
+// description: String = "Short product description";
 
-price: Number = 99.99;
+// price: Number = 99.99;
 
-category: ProductSizes = ProductSizes.XXXL;
+// category: ProductCategories = ProductCategories.Category1;
 
-isAvailable: Boolean = false;
+// isAvailable: Boolean = false;
 
-tags: Array<String> = _tags; 
+// tags: Array<String> = _tags; 
 }
