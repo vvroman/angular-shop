@@ -1,10 +1,4 @@
-@import '../../../common/variables.scss';
-
-.root {
-    span {
-
-        margin-right: $appSpacingMd;
-        padding: $appSpacingSm;
-        background-color: $appClGrey1;
-    }
-}
+.product-card {
+    width: 300px;
+  }
+  
