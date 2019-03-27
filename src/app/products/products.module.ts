@@ -4,9 +4,10 @@ import { MatCardModule, MatButtonModule, MatChipsModule } from '@angular/materia
 
 import { ProductComponent } from './components/product/product.component';
 import { CommonModule } from '@angular/common';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
-  declarations: [ProductComponent],
+  declarations: [ProductComponent, ProductListComponent],
   imports: [CommonModule, MatButtonModule, MatCardModule, MatChipsModule],
   exports: [ProductComponent]
 })

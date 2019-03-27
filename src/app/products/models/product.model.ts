@@ -11,9 +11,9 @@ export interface IProduct {
 }
 
 export class Product implements IProduct {
-  
-  constructor (
-  public id: number,  
+
+  constructor(
+  public id: number,
   public name: string,
   public description: string,
   public price: number,
@@ -21,5 +21,5 @@ export class Product implements IProduct {
   public isAvailable: boolean,
   public tags: string[],
   ) {}
-  
+
 }
