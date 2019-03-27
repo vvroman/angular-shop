@@ -1,8 +1,8 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
-import { MatCardModule, MatButtonModule, MatChipsModule } from "@angular/material";
+import { MatCardModule, MatButtonModule, MatChipsModule } from '@angular/material';
 
-import { ProductComponent } from "./components/product/product.component";
+import { ProductComponent } from './components/product/product.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({

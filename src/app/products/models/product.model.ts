@@ -1,11 +1,11 @@
-import { ProductCategories } from "./../shared/constants";
+import { ProductCategories } from './../shared/constants';
 
 export interface IProduct {
-  id: number,
+  id: number;
   name: string;
   description: string;
   price: number;
-  category: ProductCategories
+  category: ProductCategories;
   isAvailable: boolean;
   tags: Array<string>;
 }

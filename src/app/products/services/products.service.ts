@@ -1,7 +1,7 @@
-import { Injectable } from "@angular/core";
-import { IProduct } from "../models/product.model";
+import { Injectable } from '@angular/core';
+import { IProduct } from '../models/product.model';
 
-import { productsMock } from "../mocks/products.mock";
+import { productsMock } from '../mocks/products.mock';
 
 @Injectable({ providedIn: 'root'})
 export class ProductsService {

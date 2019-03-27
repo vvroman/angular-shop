@@ -1,4 +1,4 @@
-import { IProduct } from "src/app/products/models/product.model";
+import { IProduct } from 'src/app/products/models/product.model';
 
 export interface ICart {
     goods: ICartItem[];
@@ -15,9 +15,9 @@ export class Cart implements ICart {
     get(): Promise<IProduct[]> {
         return Promise.resolve(this.goods);
     }
-    push(product: IProduct, quantity: number): {
+    push(product: IProduct, quantity: number): IProduct[] {
         return this.goods;
-    } 
+    }
 
     private _findItemIndex(): number {
         return -1;

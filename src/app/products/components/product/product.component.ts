@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SafeMethodCall } from '@angular/compiler';
 
-import { IProduct } from "../../models/product.model";
+import { IProduct } from '../../models/product.model';
 import { ProductCategories } from '../../shared/constants';
 
 @Component({
@@ -14,11 +14,11 @@ export class ProductComponent implements OnInit {
   constructor() {
   }
 
+  @Input() product: IProduct;
+
   ngOnInit() {
   }
 
-  @Input() product: IProduct;
-  
 // name: String = "Product1";
 
 // description: String = "Short product description";
@@ -29,5 +29,5 @@ export class ProductComponent implements OnInit {
 
 // isAvailable: Boolean = false;
 
-// tags: Array<String> = _tags; 
+// tags: Array<String> = _tags;
 }

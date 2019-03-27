@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ProductsService } from "./products/services/products.service";
+import { ProductsService } from './products/services/products.service';
 import { IProduct } from './products/models/product.model';
 
 @Component({
@@ -15,8 +15,8 @@ export class AppComponent {
 
   constructor(private productsService: ProductsService) {}
 
-  async ngOnInit() {
-    this.products = await this.productsService.getProducts();
+  ngOnInit() {
+    this.productsService.getProducts().then((products: IProduct[]) => { this.products = products; });
   }
 
   getProducts(): IProduct[] {
