@@ -2,12 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {
-<<<<<<< HEAD
-  MatButtonModule,
-  MatCardModule
-=======
   MatGridListModule
->>>>>>> e507a390d3cd7caef7284c7f903401dbec44d38a
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -23,13 +18,8 @@ import { CartComponent } from './cart/components/cart/cart.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
-    MatButtonModule,
-    MatCardModule
-=======
     ProductsModule,
     MatGridListModule
->>>>>>> e507a390d3cd7caef7284c7f903401dbec44d38a
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,3 +9,17 @@ export interface IProduct {
   isAvailable: boolean;
   tags: Array<string>;
 }
+
+export class Product implements IProduct {
+  
+  constructor (
+  public id: number,  
+  public name: string,
+  public description: string,
+  public price: number,
+  public category: ProductCategories,
+  public isAvailable: boolean,
+  public tags: string[],
+  ) {}
+  
+}

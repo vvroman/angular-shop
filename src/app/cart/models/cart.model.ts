@@ -10,16 +10,22 @@ export interface ICartItem {
 }
 
 export class Cart implements ICart {
-    goods: [];
 
-    get(): Promise<IProduct[]> {
+    constructor( public goods: ICartItem[]) {
+    }
+
+    get(): Promise<ICartItem[]> {
         return Promise.resolve(this.goods);
     }
-    push(product: IProduct, quantity: number): IProduct[] {
-        return this.goods;
+
+    add(cartItem: ICartItem): number {
+        const itemIndex = this._findItemIndex(cartItem);
+
+        itemIndex > 0 ? this.goods.push(cartItem) : this.goods[itemIndex].quantity += cartItem.quantity;
+        return cartItem.quantity;
     }
 
-    private _findItemIndex(): number {
+    private _findItemIndex(cartItem: ICartItem): number {
         return -1;
     }
 }
