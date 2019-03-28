@@ -11,6 +11,6 @@ export class CartCommunicationService {
 
   putItem(cartItem: ICartItem) {
     this.channel.next(cartItem);
-    console.log(cartItem);
+    console.log(`put to cart: ${cartItem.item.name}`);
   }
 }
