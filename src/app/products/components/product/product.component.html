@@ -1,16 +1,27 @@
 <mat-card class="product-card">
   <mat-card-header>
-      <mat-card-title>{{product.name}}</mat-card-title>
+    <mat-card-title>{{ product.name }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-      <div><p>{{product.description}}</p></div>
-      <div>{{product.category}}</div>
-      <div><span>Price:</span><span>{{product.price}}</span></div>
-      <mat-chip-list>
-          <mat-chip *ngFor="let tag of product.tags">{{tag}}</mat-chip>
-      </mat-chip-list>
+    <div>
+      <p>{{ product.description }}</p>
+    </div>
+    <div>{{ product.category }}</div>
+    <div>
+      <span>Price:</span><span>{{ product.price }}</span>
+    </div>
+    tags:
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of product.tags">{{ tag }}</mat-chip>
+    </mat-chip-list>
   </mat-card-content>
   <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="onBuyClick(this.product)"  >Buy</button>
-    </mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onBuyClick(this.product)"
+    >
+      Buy
+    </button>
+  </mat-card-actions>
 </mat-card>

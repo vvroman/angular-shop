@@ -7,18 +7,19 @@ export class Cart implements ICart {
     constructor( public goods: ICartItem[]) {
     }
 
-    get(): Promise<ICartItem[]> {
-        return Promise.resolve(this.goods);
-    }
-
     add(cartItem: ICartItem): number {
-        const itemIndex = this._findItemIndex(cartItem);
-
-        itemIndex > 0 ? this.goods.push(cartItem) : this.goods[itemIndex].quantity += cartItem.quantity;
+        const itemIndex = this.goods.findIndex(v => v.item.id === cartItem.item.id);
+        itemIndex < 0 ? this.goods.push(cartItem) : this.goods[itemIndex].quantity += cartItem.quantity;
         return cartItem.quantity;
     }
 
-    private _findItemIndex(cartItem: ICartItem): number {
-        return -1;
+    getItems(): ICartItem[] {
+        return this.goods;
     }
+
+    getSubtotals(): number {
+       return this.goods.reduce((acc, val) => acc += val.item.price * val.quantity, 0);
+    }
+
+
 }

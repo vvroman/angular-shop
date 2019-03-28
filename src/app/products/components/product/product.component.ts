@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SafeMethodCall } from '@angular/compiler';
 
 import { IProduct } from '../../models/product.interface';
 import { CartCommunicationService } from 'src/app/cart/shared/services/cart-communication.service';
