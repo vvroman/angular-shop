@@ -1,4 +1,4 @@
-import { IProduct } from 'src/app/products/models/product.model';
+import { IProduct } from 'src/app/products/models/product.interface';
 
 export interface ICart {
     goods: ICartItem[];

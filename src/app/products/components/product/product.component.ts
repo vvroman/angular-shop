@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SafeMethodCall } from '@angular/compiler';
 
-import { IProduct } from '../../models/product.model';
-import { ProductCategories } from '../../shared/constants';
+import { IProduct } from '../../models/product.interface';
+import { ProductCategories } from '../../shared/product-categories';
 
 @Component({
   selector: 'app-product',
