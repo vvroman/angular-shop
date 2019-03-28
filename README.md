@@ -1,6 +1,19 @@
 # Shop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+_Components_: 
+- Product, 
+- ProductList, 
+- Cart
+
+_Services_: 
+- CartCommunication service - using RXJS to communicate between Product and Cart
+- CartService - provide cart items
+- ProductListService - provide products
+
+_features_
+- add item to cart, quantity per product calculation 
+- cart subtotals calculation
+
 
 ## Development server
 
