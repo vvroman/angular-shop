@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SafeMethodCall } from '@angular/compiler';
 
 import { IProduct } from '../../models/product.interface';
-import { ProductCategories } from '../../shared/product-categories';
+import { CartCommunicationService } from 'src/app/cart/shared/services/cart-communication.service';
+import { CartItem } from 'src/app/cart/shared/models/cart-item.model';
 
 @Component({
   selector: 'app-product',
@@ -10,24 +11,13 @@ import { ProductCategories } from '../../shared/product-categories';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
-  constructor() {
-  }
+  constructor(private cartCommunicationService: CartCommunicationService) {}
 
   @Input() product: IProduct;
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onBuyClick(product: IProduct): void {
+    this.cartCommunicationService.putItem(new CartItem(product, 1));
   }
-
-// name: String = "Product1";
-
-// description: String = "Short product description";
-
-// price: Number = 99.99;
-
-// category: ProductCategories = ProductCategories.Category1;
-
-// isAvailable: Boolean = false;
-
-// tags: Array<String> = _tags;
 }

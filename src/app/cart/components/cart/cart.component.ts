@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ICartItem } from '../../shared/models/cart-item.interface';
 
 @Component({
   selector: 'app-cart',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+
+  items: ICartItem[] = [];
 
   constructor() { }
 

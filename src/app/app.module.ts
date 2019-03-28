@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartComponent } from './cart/components/cart/cart.component';
+import { CartCommunicationService } from './cart/shared/services/cart-communication.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CartComponent } from './cart/components/cart/cart.component';
     ProductsModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [CartCommunicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
