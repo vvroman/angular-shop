@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartComponent } from './cart/components/cart/cart.component';
 import { CartCommunicationService } from './cart/shared/services/cart-communication.service';
 import { CartModule } from './cart/cart.module';
+import { CartService } from './cart/services/cart.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { CartModule } from './cart/cart.module';
     MatGridListModule,
     MatCardModule
   ],
-  providers: [CartCommunicationService],
+  providers: [CartCommunicationService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

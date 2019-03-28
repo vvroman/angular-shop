@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ICartItem } from '../../shared/models/cart-item.interface';
 import { CartCommunicationService } from '../../shared/services/cart-communication.service';
 import { Subscription } from 'rxjs';
-import { Cart } from '../../models/cart.model';
-import { CartItem } from '../../shared/models/cart-item.model';
+import { CartService } from '../../services/cart.service';
+import { ICartItem } from '../../shared/models/cart-item.interface';
 
 @Component({
   selector: 'app-cart',
@@ -11,23 +10,24 @@ import { CartItem } from '../../shared/models/cart-item.model';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit, OnDestroy {
-  cart: Cart = new Cart([]);
-
-  private sub: Subscription;
-
-  constructor(private cartCommunicationService: CartCommunicationService) {}
-
   get items(): ICartItem[] {
-    return this.cart.getItems();
+    return this.cartService.getItems();
   }
 
   get subtotals(): number {
-    return this.cart.getSubtotals();
+    return this.cartService.getSubtotals();
   }
+
+  private sub: Subscription;
+
+  constructor(
+    private cartCommunicationService: CartCommunicationService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit() {
     this.sub = this.cartCommunicationService.channel$.subscribe(item => {
-      this.cart.add(item);
+      this.cartService.add(item);
     });
   }
 
