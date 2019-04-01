@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { IProduct } from '../../models/product.interface';
-import { CartCommunicationService } from 'src/app/cart/shared/services/cart-communication.service';
+import { CartCommunicationService } from 'src/app/core/services/cart-communication.service';
 import { CartItem } from 'src/app/cart/shared/models/cart-item.model';
 
 @Component({

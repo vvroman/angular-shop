@@ -16,6 +16,11 @@ export class CartService {
   getItems(): ICartItem[] {
     return this.goods;
   }
+
+  getItemsCount(): number {
+    return this.goods.reduce((acc, item) => acc += item.quantity , 0);
+  }
+
   getSubtotals(): number {
     return this.goods.reduce(
       (acc, val) => (acc += val.item.price * val.quantity),

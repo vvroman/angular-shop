@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CartCommunicationService } from '../../shared/services/cart-communication.service';
+import { CartCommunicationService } from '../../../core/services/cart-communication.service';
 import { Subscription } from 'rxjs';
 import { CartService } from '../../services/cart.service';
 import { ICartItem } from '../../shared/models/cart-item.interface';

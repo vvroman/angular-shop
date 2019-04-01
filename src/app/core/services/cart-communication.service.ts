@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { ICartItem } from '../models/cart-item.interface';
+import { ICartItem } from '../../cart/shared/models/cart-item.interface';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class CartCommunicationService {
 
   private channel = new Subject<ICartItem>();

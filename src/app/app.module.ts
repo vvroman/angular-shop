@@ -8,24 +8,23 @@ import {
 import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CartComponent } from './cart/components/cart/cart.component';
-import { CartCommunicationService } from './cart/shared/services/cart-communication.service';
+import { SharedModule } from './shared/shared.module';
 import { CartModule } from './cart/cart.module';
-import { CartService } from './cart/services/cart.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ProductsModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    ProductsModule,
+    SharedModule,
+    CartModule
   ],
-  providers: [CartCommunicationService, CartService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
