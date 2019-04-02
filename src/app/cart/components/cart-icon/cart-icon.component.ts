@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { CartService } from '../../services/cart.service';
+import { CartCommunicationService } from 'src/app/core/services/cart-communication.service';
 
 @Component({
   selector: 'app-cart-icon',
@@ -7,18 +7,12 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./cart-icon.component.scss']
 })
 export class CartIconComponent implements OnInit {
+  constructor(private cartService: CartCommunicationService) {}
 
-  constructor(
-    private cartService: CartService
-    ) { }
+  ngOnInit() {}
 
   get itemsCount(): number {
     const count = this.cartService.getItemsCount();
     return count === 0 ? null : count;
   }
-
-  ngOnInit() {
-
-  }
-
 }

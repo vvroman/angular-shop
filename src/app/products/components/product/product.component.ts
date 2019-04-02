@@ -17,6 +17,6 @@ export class ProductComponent implements OnInit {
   ngOnInit() {}
 
   onBuyClick(product: IProduct): void {
-    this.cartCommunicationService.putItem(new CartItem(product, 1));
+    this.cartCommunicationService.add(new CartItem(product, 1));
   }
 }
