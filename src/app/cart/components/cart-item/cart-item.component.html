@@ -1,3 +1,14 @@
-<p>
-  cart-item works!
-</p>
+<mat-list-item role="listitem" appHighlight>
+  <span appHighlight>{{ cartItem.item.name }}</span>
+  <span class="spacer"></span>
+  <span>Quqntity:{{ cartItem.quantity }}</span>
+  <button mat-icon-button color="primary" (click)="inc()">
+    <mat-icon>add_circle</mat-icon>
+  </button>
+  <button mat-icon-button color="primary" (click)="dec()">
+    <mat-icon>remove_circle</mat-icon>
+  </button>
+  <button mat-icon-button color="warn" (click)="del()">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-list-item>

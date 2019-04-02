@@ -1,18 +1,18 @@
+<div class="cart-wr">
 <mat-card class="cart-card">
   <mat-card-header>
     <mat-card-title>Shopping Cart</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <ng-container *ngIf="items.length > 0; else elseTemplate">
-      <ul>
-        <li *ngFor="let item of items">
-          {{ item.item.name }}:{{ item.quantity }}
-        </li>
-      </ul>
+        <h3 mat-subheader>Shopping-cart</h3>
+      <app-cart-list></app-cart-list>
     </ng-container>
     <ng-template #elseTemplate>
       <span>Let's go shopping!</span>
     </ng-template>
+    <mat-divider></mat-divider>
     <span *ngIf="subtotals > 0">&nbsp;Subtotals:{{ subtotals | currency:'USD' }}</span>
   </mat-card-content>
 </mat-card>
+</div>

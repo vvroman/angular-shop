@@ -1,3 +1,10 @@
-<p>
-  cart-list works!
-</p>
+<mat-list role="list">
+  <ng-container *ngFor="let cartItem of cartItems">
+      <app-cart-item 
+        [cartItem]="cartItem" 
+        (incQuantity)="onIncQuantity($event)" 
+        (decQuantity)="onDecQuantity($event)"
+        (delItem)="onDelItem($event)"
+        ></app-cart-item>
+  </ng-container>
+</mat-list>

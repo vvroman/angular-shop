@@ -6,17 +6,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MatToolbarModule, MatIconModule } from '@angular/material';
 import { CartIconComponent } from '../cart/components/cart-icon/cart-icon.component';
 import { CartModule } from '../cart/cart.module';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [PageComponent, HeaderComponent, FooterComponent],
-  imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    CartModule
-  ], 
-  exports: [
-    PageComponent
-  ]
+  declarations: [
+    PageComponent,
+    HeaderComponent,
+    FooterComponent,
+    HighlightDirective
+  ],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, CartModule],
+  exports: [PageComponent, HighlightDirective]
 })
-export class SharedModule { }
+export class SharedModule {}

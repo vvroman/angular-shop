@@ -6,16 +6,7 @@ import { ICartItem } from '../../cart/shared/models/cart-item.interface';
 export class CartCommunicationService {
   private goods: ICartItem[] = [];
 
-  // private channel = new Subject<ICartItem>();
 
-  // public channel$ = this.channel.asObservable();
-
-  // putItem(cartItem: ICartItem) {
-  //   console.log("add Item");
-    
-  //   this.channel.next(cartItem);
-  // }
-  
   add(cartItem: ICartItem): number {
     const itemIndex = this.goods.findIndex(v => v.item.id === cartItem.item.id);
     itemIndex < 0
@@ -24,9 +15,19 @@ export class CartCommunicationService {
     return this.goods.length;
   }
 
+  dec(cartItem: ICartItem): number {
+    const itemIndex = this.goods.findIndex(v => v.item.id === cartItem.item.id);
+    if (itemIndex >= 0) {
+      this.goods[itemIndex].quantity > cartItem.quantity
+        ? (this.goods[itemIndex].quantity -= cartItem.quantity)
+        : this.delItem(cartItem);
+    }
+    return this.goods.length;
+  }
+
   delItem(cartItem: ICartItem): number {
     const itemIndex = this.goods.findIndex(v => v.item.id === cartItem.item.id);
-    if (itemIndex > 0) {
+    if (itemIndex >= 0) {
       this.goods.splice(itemIndex, 1);
     }
     return this.goods.length;

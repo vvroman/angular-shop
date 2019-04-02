@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartCommunicationService } from 'src/app/core/services/cart-communication.service';
+import { ICartItem } from '../../shared/models/cart-item.interface';
 
 @Component({
   selector: 'app-cart-list',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cartService: CartCommunicationService) { }
+
+  get cartItems(): ICartItem[] {
+    return this.cartService.getItems();
+  }
+
+  onIncQuantity(cartItem: ICartItem) {
+    this.cartService.add({ item: cartItem.item, quantity: 1 });
+  }
+
+  onDecQuantity(cartItem: ICartItem) {
+    this.cartService.dec({ item: cartItem.item, quantity: 1 });
+  }
+  onDelItem(cartItem: ICartItem) {
+    this.cartService.delItem(cartItem);
+  }
 
   ngOnInit() {
   }
