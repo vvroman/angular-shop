@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, TemplateRef, ViewChild, ViewContainerRef, AfterViewInit, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef, ViewChild, ViewContainerRef, AfterViewInit, ComponentFactoryResolver, AfterContentInit } from '@angular/core';
 import { CartIconComponent } from 'src/app/cart/components/cart-icon/cart-icon.component';
 
 @Component({
@@ -6,14 +6,14 @@ import { CartIconComponent } from 'src/app/cart/components/cart-icon/cart-icon.c
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent implements AfterContentInit {
 
   @ViewChild('icons', { read: ViewContainerRef }) icons: ViewContainerRef;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
-  ngAfterViewInit() {
+  ngAfterContentInit() {
     const factory = this.componentFactoryResolver.resolveComponentFactory(CartIconComponent);
-    this.icons.createComponent(factory);
+    this.icons. createComponent(factory);
   }
 }

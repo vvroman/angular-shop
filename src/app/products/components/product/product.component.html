@@ -19,6 +19,7 @@
     <button
       mat-raised-button
       color="primary"
+      [disabled]="!product.isAvailable"
       (click)="onBuyClick(this.product)"
     >
       Buy

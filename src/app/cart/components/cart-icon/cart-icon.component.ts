@@ -9,13 +9,13 @@ import { CartService } from '../../services/cart.service';
 export class CartIconComponent implements OnInit {
 
   constructor(
-    // private cartService: CartService
+    private cartService: CartService
     ) { }
 
-  // get itemsCount(): number {
-  //   const count = this.cartService.getItemsCount();
-  //   return count === 0 ? null : count;
-  // }
+  get itemsCount(): number {
+    const count = this.cartService.getItemsCount();
+    return count === 0 ? null : count;
+  }
 
   ngOnInit() {
 

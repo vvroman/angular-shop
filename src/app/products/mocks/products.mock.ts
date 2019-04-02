@@ -26,7 +26,7 @@ export const productsMock: Product[] = [
     'Description  Description  Description  Description  Description  Description  Description  Description  Description  ',
     11.39,
     ProductCategories.Category2,
-    false,
+    true,
     ['cool', 'cheap', 'bestBuy']
   )
 ];

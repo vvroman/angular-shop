@@ -13,6 +13,6 @@
     <ng-template #elseTemplate>
       <span>Let's go shopping!</span>
     </ng-template>
-    <span *ngIf="subtotals > 0">Subtotals:{{ subtotals }}</span>
+    <span *ngIf="subtotals > 0">&nbsp;Subtotals:{{ subtotals | currency:'USD' }}</span>
   </mat-card-content>
 </mat-card>
