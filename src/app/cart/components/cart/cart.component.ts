@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ICartItem } from '../../shared/models/cart-item.interface';
-import { CartCommunicationService } from 'src/app/core/services/cart-communication.service';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +13,7 @@ export class CartComponent {
 
   private sub: Subscription;
 
-  constructor(private cartService: CartCommunicationService) {}
+  constructor(private cartService: CartService) {}
 
   get items(): ICartItem[] {
     return this.cartService.getItems();

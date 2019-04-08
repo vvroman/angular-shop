@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { ICartItem } from '../../cart/shared/models/cart-item.interface';
 
 @Injectable({providedIn: 'root'})
-export class CartCommunicationService {
+export class CartService {
   private goods: ICartItem[] = [];
 
 

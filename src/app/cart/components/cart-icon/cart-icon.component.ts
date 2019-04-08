@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { CartCommunicationService } from 'src/app/core/services/cart-communication.service';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'app-cart-icon',
@@ -7,7 +7,7 @@ import { CartCommunicationService } from 'src/app/core/services/cart-communicati
   styleUrls: ['./cart-icon.component.scss']
 })
 export class CartIconComponent implements OnInit {
-  constructor(private cartService: CartCommunicationService) {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit() {}
 

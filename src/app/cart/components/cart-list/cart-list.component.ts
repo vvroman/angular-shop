@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartCommunicationService } from 'src/app/core/services/cart-communication.service';
+import { CartService } from 'src/app/core/services/cart.service';
 import { ICartItem } from '../../shared/models/cart-item.interface';
 
 @Component({
@@ -9,7 +9,7 @@ import { ICartItem } from '../../shared/models/cart-item.interface';
 })
 export class CartListComponent implements OnInit {
 
-  constructor(private cartService: CartCommunicationService) { }
+  constructor(private cartService: CartService) { }
 
   get cartItems(): ICartItem[] {
     return this.cartService.getItems();

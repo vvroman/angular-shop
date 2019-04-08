@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { IProduct } from '../../models/product.interface';
-import { CartCommunicationService } from 'src/app/core/services/cart-communication.service';
+import { CartService } from 'src/app/core/services/cart.service';
 import { CartItem } from 'src/app/cart/shared/models/cart-item.model';
 
 @Component({
@@ -10,13 +10,13 @@ import { CartItem } from 'src/app/cart/shared/models/cart-item.model';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  constructor(private cartCommunicationService: CartCommunicationService) {}
+  constructor(private cartService: CartService) {}
 
   @Input() product: IProduct;
 
   ngOnInit() {}
 
   onBuyClick(product: IProduct): void {
-    this.cartCommunicationService.add(new CartItem(product, 1));
+    this.cartService.add(new CartItem(product, 1));
   }
 }
