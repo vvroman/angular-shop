@@ -10,7 +10,7 @@ import {
 })
 export class HighlightDirective {
   @HostListener('mouseenter') mouseOver() {
-    this.el.nativeElement.style.backgroundColor = "red";
+    this.el.nativeElement.style.backgroundColor = 'red';
 
   }
 

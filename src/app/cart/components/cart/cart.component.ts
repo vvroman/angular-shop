@@ -14,7 +14,7 @@ export class CartComponent {
   private sub: Subscription;
 
   constructor(private cartService: CartCommunicationService) {}
-  
+
   get items(): ICartItem[] {
     return this.cartService.getItems();
   }
