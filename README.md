@@ -3,7 +3,10 @@
 TODO: add index.ts files to organize exports.
 
 08.04.2019
--cartService, localStorageService.
+- cartService, 
+- localStorageService
+- save cart to local storage 
+- configOptions service (first implementation);
 
 _Components_: 
 - Product, 
