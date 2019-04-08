@@ -1,5 +1,10 @@
 # Shop
 
+TODO: add index.ts files to organize exports.
+
+08.04.2019
+-cartService, localStorageService.
+
 _Components_: 
 - Product, 
 - ProductList, 
