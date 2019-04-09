@@ -1,12 +1,16 @@
 # Shop
 
 TODO: add index.ts files to organize exports.
+09.04.2019
+- all types pf services (normal, useVaue, Factory);
+- AboutUs Component. inject all services here. (footer). some play with standart pipes.
+- added directive (drop shadow on click) to product card component. 
 
 08.04.2019
 - cartService, 
 - localStorageService
 - save cart to local storage 
-- configOptions service (first implementation);
+- configOptions service (first implementation. Save to localStorage using localStorageService);
 
 _Components_: 
 - Product, 
