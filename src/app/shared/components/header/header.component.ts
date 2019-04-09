@@ -5,12 +5,10 @@ import {
   ComponentFactoryResolver,
   AfterContentInit,
   ElementRef,
-  inject,
   Inject
 } from '@angular/core';
 import { CartIconComponent } from 'src/app/cart/components/cart-icon/cart-icon.component';
 import { ConstantsService } from 'src/app/core/services';
-import { constants } from 'os';
 
 @Component({
   selector: 'app-header',
