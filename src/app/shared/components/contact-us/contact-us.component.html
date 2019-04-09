@@ -1,0 +1,3 @@
+<span>--{{constants.APP_NAME}}-</span>
+<span>--{{generator}}--</span>
+<span *ngFor="let key of configOptions.getOptions() | keyvalue">--{{key | json}}--</span>
